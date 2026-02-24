@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Web - syrine.lan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.18);
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .info {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Bienvenue sur le site web</h1>
+        <h2>www.syrine.lan</h2>
+        <p>Ce site est hébergé sur un serveur Apache configuré dans le cadre du projet d'infrastructure réseau.</p>
+        <p>La connexion est sécurisée en <strong>HTTPS</strong>.</p>
+        <div class="info">
+            <p> Date et heure : <span id="datetime"></span></p>
+            <p> Serveur : Apache sur Debian</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('datetime').innerHTML = new Date().toLocaleString('fr-FR');
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<VirtualHost *:443>
+    # Configuration HTTPS pour www.syrine.lan
+    ServerName www.syrine.lan
+    DocumentRoot /var/www/syrine.lan/www
+    
+    # Configuration SSL
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/syrine.lan.crt
+    SSLCertificateKeyFile /etc/ssl/private/syrine.lan.key
+    
+    <Directory /var/www/syrine.lan/www>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    ErrorLog ${APACHE_LOG_DIR}/syrine-www-error.log
+    CustomLog ${APACHE_LOG_DIR}/syrine-www-access.log combined
+</VirtualHost>
+
+# Redirection HTTP vers HTTPS
+<VirtualHost *:80>
+    ServerName www.syrine.lan
+    Redirect permanent / https://www.syrine.lan/
+</VirtualHost>

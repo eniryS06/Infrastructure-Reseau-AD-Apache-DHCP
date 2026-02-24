@@ -1,0 +1,17 @@
+$TTL 604800
+@ IN SOA srvinfra.syrine.lan. admin.syrine.lan. (
+    2024022001   ; Serial
+    604800       ; Refresh
+    86400        ; Retry
+    2419200      ; Expire
+    604800       ; Negative Cache TTL
+)
+
+@ IN NS srvinfra.syrine.lan.
+
+; Enregistrements PTR (reverse lookup)
+100 IN PTR srvinfra.syrine.lan.
+100 IN PTR syrinead.syrine.lan.
+50  IN PTR pcclient.syrine.lan.
+100 IN PTR www.syrine.lan.
+100 IN PTR intranet.syrine.lan.

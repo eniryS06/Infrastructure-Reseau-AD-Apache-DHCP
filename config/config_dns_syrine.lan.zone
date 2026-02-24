@@ -1,0 +1,24 @@
+$ORIGIN syrine.lan.
+$TTL 604800
+@ IN SOA srvinfra.syrine.lan. admin.syrine.lan. (
+    2024022001   ; Serial (YYYYMMDDNN)
+    604800       ; Refresh
+    86400        ; Retry
+    2419200      ; Expire
+    604800       ; Negative Cache TTL
+)
+
+; Serveurs DNS
+@ IN NS srvinfra.syrine.lan.
+
+; Enregistrements A (IPv4)
+srvinfra        IN A    192.168.1.100
+syrinead        IN A    192.168.1.100
+pccclient       IN A    192.168.1.50
+
+; Sites web
+www             IN A    192.168.1.100
+intranet        IN A    192.168.1.100
+
+; Alias (CNAME)
+ftp             IN CNAME    srvinfra.syrine.lan.
