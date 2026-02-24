@@ -217,7 +217,7 @@ L'accès FTP est configuré pour permettre la mise à jour du contenu de l'intra
 ##  Auteure
 
 **ABDELBASSET Syrine**  
-Bachelor Cyber 1
+Bachelor 1 Cybersécurité & Ethical HAcking
 
 ##  Notes complémentaires
 
@@ -226,3 +226,4 @@ Bachelor Cyber 1
 - Pour la partie HTTPS, un certificat auto-signé est utilisé (adapté pour un environnement de test uniquement)
 - Les mots de passe par défaut des utilisateurs doivent être changés à la première connexion
 - Pensez à adapter les adresses IP dans les fichiers de configuration si votre réseau NAT utilise une plage différente
+
